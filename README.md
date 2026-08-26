@@ -97,7 +97,7 @@ The microservices communicate using two approaches:
 
 `Java` • `Spring Boot` • `Spring Cloud` • `Spring Security` • `Spring Data JPA` • `Spring Cloud Gateway` • `OpenFeign` • `Resilience4j` • `JJWT` • `Apache Kafka` • `Redis` • `PostgreSQL` • `Google GenAI SDK` • `Spring Boot Mail` • `Lombok` • `Maven`
 
-## 🎨 Frontend Technologies
+# 🎨 Frontend Technologies
 
 The frontend is built with a modern **React ecosystem**, focusing on performance, scalability, responsive design, and a clean user experience.
 
