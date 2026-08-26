@@ -96,3 +96,89 @@ The microservices communicate using two approaches:
 ### Backend Stack
 
 `Java` • `Spring Boot` • `Spring Cloud` • `Spring Security` • `Spring Data JPA` • `Spring Cloud Gateway` • `OpenFeign` • `Resilience4j` • `JJWT` • `Apache Kafka` • `Redis` • `PostgreSQL` • `Google GenAI SDK` • `Spring Boot Mail` • `Lombok` • `Maven`
+
+## 🎨 Frontend Technologies
+
+The frontend is built with a modern **React ecosystem**, focusing on performance, scalability, responsive design, and a clean user experience.
+
+### 🛠️ Technology Stack
+
+| Technology             | Purpose                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------ |
+| ⚛️ **React**           | Builds dynamic, interactive, and component-based user interfaces.                    |
+| ⚡ **Vite**             | Provides a fast development server and optimized production build system.            |
+| 🗃️ **Redux Toolkit**  | Manages global application state efficiently with simplified Redux logic.            |
+| 🔄 **React Redux**     | Connects React components with the Redux store.                                      |
+| 🧭 **React Router**    | Handles client-side navigation and routing in the Single Page Application (SPA).     |
+| 🌐 **Axios**           | Handles HTTP requests and communication between the frontend and backend APIs.       |
+| 📝 **React Hook Form** | Manages form state and validation with high performance and minimal re-renders.      |
+| ✅ **Zod**              | Provides schema-based validation for forms and API data.                             |
+| 🎨 **Tailwind CSS**    | Enables fast and responsive UI styling using utility-first CSS classes.              |
+| 🧩 **shadcn/ui**       | Provides modern, customizable, and reusable UI components.                           |
+| ♿ **Radix UI**         | Provides accessible and unstyled UI primitives for building high-quality interfaces. |
+| ✨ **Lucide**           | Supplies clean, lightweight, and customizable icons.                                 |
+| 📅 **date-fns**        | Handles date formatting, parsing, and manipulation.                                  |
+
+---
+
+## ✨ Frontend Highlights
+
+### ⚡ Fast Development
+
+Built with **Vite** for a fast development experience, instant updates, and optimized production builds.
+
+### 🚀 High Performance
+
+Designed to minimize unnecessary rendering and provide a fast, smooth user experience.
+
+### 📱 Responsive UI
+
+The interface is designed to work seamlessly across:
+
+**Desktop** • **Tablet** • **Mobile**
+
+### 🧩 Scalable & Maintainable
+
+The frontend follows a clean, modular architecture with reusable components, centralized state management, and clear separation of responsibilities.
+
+---
+
+## 🔄 Frontend Flow
+
+```text
+┌───────────────────┐
+│       User        │
+└─────────┬─────────┘
+          │
+          ▼
+┌───────────────────┐
+│     React UI      │
+│ Tailwind + shadcn │
+└─────────┬─────────┘
+          │
+          ├──────────────► React Router
+          │
+          ├──────────────► Redux Toolkit
+          │
+          └──────────────► Forms + Zod
+          │
+          ▼
+┌───────────────────┐
+│       Axios       │
+└─────────┬─────────┘
+          │
+          ▼
+┌───────────────────┐
+│    API Gateway    │
+└─────────┬─────────┘
+          │
+          ▼
+┌───────────────────┐
+│ Backend Services  │
+└───────────────────┘
+```
+
+### Frontend Stack
+
+`React` • `Vite` • `Redux Toolkit` • `React Redux` • `React Router` • `Axios` • `React Hook Form` • `Zod` • `Tailwind CSS` • `shadcn/ui` • `Radix UI` • `Lucide` • `date-fns`
+
