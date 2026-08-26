@@ -222,7 +222,7 @@ Security is considered across the entire architecture, from the API Gateway to i
 
 ---
 
-## 🏗️ Infrastructure Architecture
+# 🏗️ Infrastructure Architecture
 
 ```text
                          ┌─────────────────┐
@@ -258,4 +258,50 @@ Security is considered across the entire architecture, from the API Gateway to i
 
 `Docker` • `Docker Compose` • `Eureka` • `Spring Cloud Config` • `Apache Kafka`
 
+🏗️ Architecture Concepts
 
+The application follows modern distributed system design principles to ensure scalability, resilience, security, and maintainability.
+
+🧩 Core Architecture Patterns
+Concept	Description
+🧱 Microservices Architecture	Breaks the system into independent services that can be developed, deployed, and scaled independently.
+📨 Event-Driven Architecture	Uses events for asynchronous communication between services, improving scalability and reducing coupling.
+🚪 API Gateway Pattern	Provides a centralized entry point for request routing, authentication, authorization, and other cross-cutting concerns.
+🛡️ Circuit Breaker Pattern	Prevents cascading failures by temporarily stopping requests to failing services and allowing them time to recover.
+🗄️ Database-per-Service	Each microservice owns and manages its own database, enabling loose coupling and independent data evolution.
+🔑 JWT Authentication	Secures APIs using JSON Web Tokens for stateless, token-based authentication.
+👥 Role-Based Access Control (RBAC)	Restricts access to application resources and operations based on user roles and permissions.
+🔄 How These Concepts Work Together
+                         ┌──────────────┐
+                         │     User     │
+                         └──────┬───────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │      API Gateway      │
+                    │   JWT Auth + RBAC     │
+                    └───────────┬───────────┘
+                                │
+                ┌───────────────┼───────────────┐
+                ▼               ▼               ▼
+        ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+        │ User Service │ │Order Service │ │Other Service │
+        └──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+               │                │                │
+               ▼                ▼                ▼
+          ┌────────┐       ┌────────┐       ┌────────┐
+          │   DB   │       │   DB   │       │   DB   │
+          └────────┘       └────────┘       └────────┘
+               │                │                │
+               └────────────────┼────────────────┘
+                                │
+                                ▼
+                       ┌─────────────────┐
+                       │  Apache Kafka   │
+                       │ Event Streaming │
+                       └─────────────────┘
+
+                 Resilience4j → Circuit Breaker
+🎯 Architecture Goals
+
+Scalability • Loose Coupling • Fault Tolerance • Security • Maintainability • Independent Deployment
