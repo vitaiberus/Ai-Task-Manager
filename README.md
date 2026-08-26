@@ -182,3 +182,80 @@ The frontend follows a clean, modular architecture with reusable components, cen
 
 `React` • `Vite` • `Redux Toolkit` • `React Redux` • `React Router` • `Axios` • `React Hook Form` • `Zod` • `Tailwind CSS` • `shadcn/ui` • `Radix UI` • `Lucide` • `date-fns`
 
+# 🐳 Infrastructure & DevOps
+
+The project uses modern **containerization, service discovery, centralized configuration, and event-driven infrastructure** to provide a scalable and reliable environment for microservices.
+
+### 🛠️ Infrastructure Stack
+
+| Technology                 | Purpose                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------- |
+| 🐳 **Docker**              | Packages applications and their dependencies into portable and isolated containers. |
+| 📦 **Docker Compose**      | Runs and manages multiple application services with a single command.               |
+| 🔍 **Eureka**              | Provides dynamic service registration and discovery between microservices.          |
+| ⚙️ **Spring Cloud Config** | Centralizes configuration management across all microservices.                      |
+| 📨 **Apache Kafka**        | Provides event streaming and asynchronous messaging for real-time data pipelines.   |
+
+---
+
+## 🚀 Infrastructure Highlights
+
+### 📈 Scalable
+
+Microservices can be scaled independently based on application load and demand.
+
+### 🛡️ Reliable
+
+Designed for high availability, resilience, and fault tolerance across distributed services.
+
+### ⚡ Fast Deployment
+
+Containerized services simplify application builds, deployment, and environment setup.
+
+### 📊 Observability
+
+Designed to support monitoring, logging, and tracking of overall system health and service performance.
+
+### 🔐 Secure
+
+Security is considered across the entire architecture, from the API Gateway to individual backend services.
+
+---
+
+## 🏗️ Infrastructure Architecture
+
+```text
+                         ┌─────────────────┐
+                         │      Users      │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │   API Gateway   │
+                         └────────┬────────┘
+                                  │
+                 ┌────────────────┼────────────────┐
+                 ▼                ▼                ▼
+          ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+          │  Service A  │  │  Service B  │  │  Service C  │
+          │   Docker    │  │   Docker    │  │   Docker    │
+          └──────┬──────┘  └──────┬──────┘  └──────┬──────┘
+                 │                │                │
+                 └────────────────┼────────────────┘
+                                  │
+                ┌─────────────────┼─────────────────┐
+                ▼                 ▼                 ▼
+         ┌────────────┐    ┌────────────┐    ┌────────────┐
+         │ PostgreSQL │    │   Redis    │    │   Kafka    │
+         └────────────┘    └────────────┘    └────────────┘
+
+              Service Discovery → Eureka
+              Configuration     → Spring Cloud Config
+              Orchestration     → Docker Compose
+```
+
+### Infrastructure Stack
+
+`Docker` • `Docker Compose` • `Eureka` • `Spring Cloud Config` • `Apache Kafka`
+
+
